@@ -1,0 +1,219 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.container {
+  display:grid;
+  grid-template-columns: 1fr 6fr 1fr;
+}
+
+.container > * {
+  border: 1px solid red;
+}
+
+@media only screen and (max-width: 1762px) {
+  .container {
+    grid-template-columns: 1fr 10fr 1fr
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .container {
+    grid-template-columns: 1fr 14fr 1fr
+  }
+}
+/* 
+  navigation
+*/
+
+.nav-bar {
+  grid-column: 1 / -1;
+  height: 150px;
+  display: flex;
+}
+
+.nav-bar > * {
+  flex: 1 1 14%;
+  border: 1px solid blue;
+}
+
+.nav-bar div {
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn {
+  width: 80%;
+  height: 80%;
+}
+
+.topic-btn {
+  width: 80%;
+  height: 30%;
+  border-radius: 5px;
+}
+/* 
+  Suggested Articles, top
+*/
+
+.latest-articles {
+  grid-column: 1 / -1;
+  display: flex;
+  height: 700px;
+  flex-wrap: wrap;
+}
+
+.latest-articles > * {
+  flex-basis: 25%;
+  border: 1px solid blue;
+}
+
+@media only screen and (max-width: 1762px) {
+  
+  .latest-art {
+    flex-basis: 33.333%;
+  }
+  
+  .latest-art:last-of-type {
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .latest-art {
+    flex-basis: 50%;
+  }
+
+  .latest-art:last-of-type {
+    display: unset;
+  }
+}
+
+@media only screen and (max-width: 574px) {
+  .latest-art {
+    flex-basis: 100%;
+  }
+
+}
+
+/* 
+  Center Articles, main 
+*/
+
+.main-articles {
+  grid-column: 2 / -2;
+  height: 1800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+
+.main-articles > * {
+  background-color: rgba(0, 0, 0, 0.315);
+  border: 1px solid orange;
+}
+
+.each-main-art {
+  flex: 0 1 25%;
+}
+
+.content-banner {
+  flex: 0 1 50%;
+  background-color: rgba(128, 0, 128, 0.5);
+}
+
+.ad {
+  flex: 0 1 25%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .each-main-art {
+    flex: 0 1 33.333%
+  }
+  
+
+  .content-banner {
+    flex: 0 1 66.666%;
+  }
+}
+
+@media only screen and (max-width: 824px) {
+  .each-main-art {
+    flex: 0 1 33.333%
+  }
+
+  .content-banner {
+    flex: 0 1 66.666%;
+  }
+}
+
+
+.main-banner {
+  grid-column: 1 / -1;
+  height: 600px;
+}
+
+.person-otw {
+  grid-column: 1 / -2;
+  height: 400px;
+}
+
+/* 
+  Community profiles and links
+*/
+.comm-articles {
+  grid-column: 2 / -2;
+  height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.each-comm-article {
+  flex: 0 1 50%;
+  background:rgba(255, 166, 0, 0.274);
+  border: 1px solid orange;
+}
+
+.sub-banner {
+  grid-column: 1 / -1;
+  height: 350px;
+}
+
+/* 
+  Guides section
+*/
+
+.guides {
+  grid-column: 2 / -2;
+  height: 700px;
+  display:flex;
+}
+
+.guide-section {
+  flex: 0 1 25%;
+  background-color: rgba(0, 0, 255, 0.623);
+  border: 1px solid blue;
+}
+
+.news-banner {
+ grid-column: 2 / -2;
+ height: 700px;
+}
+
+.foot {
+  grid-column: 1 / -1;
+  height: 500px;
+  padding: 0 150px;
+}
+
+.additional-topics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topic {
+  margin: 20px;
+}
