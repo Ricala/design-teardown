@@ -54,6 +54,17 @@
   height: 30%;
   border-radius: 5px;
 }
+
+@media only screen and (max-width: 600px) {
+  .nav-bar div {
+    display: none;
+  }
+
+  .nav-bar div:first-child {
+    display:flex;
+    flex-direction: column;
+  }
+}
 /* 
   Suggested Articles, top
 */
@@ -133,19 +144,20 @@
     flex: 0 1 33.333%
   }
   
-
   .content-banner {
     flex: 0 1 66.666%;
   }
 }
 
 @media only screen and (max-width: 824px) {
-  .each-main-art {
-    flex: 0 1 33.333%
+  .main-articles > * {
+    flex-basis: 50%;
   }
+}
 
-  .content-banner {
-    flex: 0 1 66.666%;
+@media only screen and (max-width: 824px) {
+  .main-articles > * {
+    flex-basis: 100%;
   }
 }
 
@@ -176,6 +188,12 @@
   border: 1px solid orange;
 }
 
+@media only screen and (max-width: 1024px) {
+  .each-comm-article {
+    flex-basis: 100%;
+  }
+}
+
 .sub-banner {
   grid-column: 1 / -1;
   height: 350px;
@@ -189,12 +207,19 @@
   grid-column: 2 / -2;
   height: 700px;
   display:flex;
+  flex-wrap: wrap;
 }
 
 .guide-section {
   flex: 0 1 25%;
   background-color: rgba(0, 0, 255, 0.623);
   border: 1px solid blue;
+}
+
+@media only screen and (max-width: 1024px) {
+  .guide-section {
+    flex: 0 1 50%;
+  }
 }
 
 .news-banner {
@@ -216,4 +241,10 @@
 
 .topic {
   margin: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .foot {
+    padding: 0 50px;
+  }
 }
