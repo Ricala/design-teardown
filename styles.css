@@ -2,13 +2,18 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'ZCOOL XiaoWei', serif;
+  text-align: center;
+}
+
 .container {
   display:grid;
   grid-template-columns: 1fr 6fr 1fr;
 }
 
 .container > * {
-  border: 1px solid red;
+  border: 1px solid white;
 }
 
 @media only screen and (max-width: 1762px) {
@@ -34,11 +39,11 @@
 
 .nav-bar > * {
   flex: 1 1 14%;
-  border: 1px solid blue;
+  border: 1px solid white;
 }
 
 .nav-bar div {
-  background: gray;
+  background: rgb(206, 203, 203);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +83,18 @@
 
 .latest-articles > * {
   flex-basis: 25%;
-  border: 1px solid blue;
+  background-color: rgb(158, 156, 156);
+  border: 1px solid white;
+}
+
+.alert {
+  position: absolute;
+  left: 0;
+  margin-left:50%;
+  transform: translateX(-50%);
+  background-color: rgb(102, 101, 101);
+  color: rgb(255, 255, 255);
+  padding: 5px;
 }
 
 @media only screen and (max-width: 1762px) {
@@ -107,6 +123,14 @@
     flex-basis: 100%;
   }
 
+  .latest-articles {
+    margin-top: 65px;
+  }
+
+  .alert {
+    top: 140px ;
+  }
+
 }
 
 /* 
@@ -115,15 +139,15 @@
 
 .main-articles {
   grid-column: 2 / -2;
-  height: 1800px;
+  height: 1500px;
   display: flex;
   flex-wrap: wrap;
   justify-content:space-between;
 }
 
 .main-articles > * {
-  background-color: rgba(0, 0, 0, 0.315);
-  border: 1px solid orange;
+  background-color: rgba(0, 0, 0, 0.151);
+  border: 1px solid white;
 }
 
 .each-main-art {
@@ -132,7 +156,7 @@
 
 .content-banner {
   flex: 0 1 50%;
-  background-color: rgba(128, 0, 128, 0.5);
+  background-color: gray;
 }
 
 .ad {
@@ -165,11 +189,13 @@
 .main-banner {
   grid-column: 1 / -1;
   height: 600px;
+  background-color: rgb(70, 69, 69);
 }
 
 .person-otw {
   grid-column: 1 / -2;
   height: 400px;
+  background-color: rgb(184, 184, 184);
 }
 
 /* 
@@ -184,8 +210,8 @@
 
 .each-comm-article {
   flex: 0 1 50%;
-  background:rgba(255, 166, 0, 0.274);
-  border: 1px solid orange;
+  background:gray;
+  border: 1px solid white;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -197,6 +223,7 @@
 .sub-banner {
   grid-column: 1 / -1;
   height: 350px;
+  background-color: rgb(87, 86, 86);
 }
 
 /* 
@@ -212,8 +239,8 @@
 
 .guide-section {
   flex: 0 1 25%;
-  background-color: rgba(0, 0, 255, 0.623);
-  border: 1px solid blue;
+  background-color: rgb(175, 174, 174);
+  border: 1px solid white;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -225,6 +252,7 @@
 .news-banner {
  grid-column: 2 / -2;
  height: 700px;
+ background-color: rgb(71, 71, 71);
 }
 
 .foot {
@@ -237,6 +265,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color:rgb(216, 216, 216);
 }
 
 .topic {
